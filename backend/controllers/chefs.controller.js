@@ -62,9 +62,50 @@ const insertChef = async (req, res)=>{
     }
 }
 
+// 24
+const allExcChfA = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Chefs');
+
+        const response = await collection.find({nombre : {$ne : "ChefA"}}).toArray();
+
+        res.json(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// 29
+const delVegCook = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Chefs');
+
+        const response = await collection.deleteMany({especialidad : "Cocina Vegetariana"});
+
+        let msg;
+
+        if (response.deletedCount > 0){
+            msg = "Chefs borrados exitosamente, solo quedan los siguientes chefs";
+        } else {
+            msg = "No se ha eliminado ningun chef"
+        }
+
+        res.json({
+            msg,
+            data : await collection.find().toArray()
+        })
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 export {
     chefMeats,
     chngChfCInter,
     chefCount,
-    insertChef
+    insertChef,
+    allExcChfA,
+    delVegCook
 }

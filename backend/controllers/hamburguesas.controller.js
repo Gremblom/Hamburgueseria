@@ -126,6 +126,90 @@ const listBurgAsc = async (req, res)=>{
     }
 }
 
+// 23
+const tomAndLett = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Hamburguesas');
+        
+        const response = await collection.find({$or : [{ingredientes : "Tomate"}, {ingredientes : "Lechuga"}]}).toArray();
+
+        res.json(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// 24
+const add2AllGourm = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Hamburguesas');
+
+        await collection.updateMany({categoria : "Gourmet"}, {$inc : {precio : 2}});
+
+        res.json(await collection.find({categoria : "Gourmet"}).toArray());
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// 27
+const expBurger = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Hamburguesas');
+
+        const response = await collection.find().sort({precio : -1}).limit(1).toArray();
+
+        res.json(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// 28
+const addPcklsClss = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Hamburguesas');
+
+        await collection.updateMany({categoria : "Clásica"}, {$push : {ingredientes : "Pepinillos"}});
+
+        res.json(await collection.find({categoria : "Clásica"}).toArray());
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// 30
+const burg7Ing = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Hamburguesas');
+
+        const response = await collection.find({ingredientes : {$size : 7}}).toArray();
+
+        res.json(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// 31
+const gourmExpChef = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Hamburguesas');
+
+        const response = collection.find({}, {$group : {_id : "$chef"}}).toArray();
+
+        res.json(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 export {
     veganBurger,
     burgerChefB,
@@ -134,5 +218,11 @@ export {
     notCheeseBurg,
     lessOrEq9,
     delLess5Ing,
-    listBurgAsc
+    listBurgAsc,
+    tomAndLett,
+    add2AllGourm,
+    expBurger,
+    addPcklsClss,
+    burg7Ing,
+    gourmExpChef
 }

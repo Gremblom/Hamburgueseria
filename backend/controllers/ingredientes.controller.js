@@ -109,6 +109,34 @@ const priceRange = async (req, res)=>{
     }
 }
 
+// 22
+const updateBrdDsc = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Ingredientes');
+
+        await collection.updateOne({nombre : "Pan"}, {$set : {descripcion : "Pan fresco y crujiente"}});
+
+        res.json(await collection.find({nombre : "Pan"}).toArray());
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// 26
+const listAlphOrd = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Ingredientes');
+
+        const response = await collection.find().sort({nombre : 1}).toArray();
+
+        res.json(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 export {
     less400,
     multiply15,
@@ -116,5 +144,7 @@ export {
     maxIng,
     incBrd100,
     hasClassic,
-    priceRange
+    priceRange,
+    updateBrdDsc,
+    listAlphOrd
 }
