@@ -9,6 +9,6 @@ router.get("/chngChefC", chngChfCInter);
 router.get("/chefCount", chefCount);
 router.get("/newChef", insertChef);
 router.get("/notChfA", allExcChfA);
-router.get("/delVeganCook", delVegCook);
+router.get("/chefCant", delVegCook);
 
 export default router;

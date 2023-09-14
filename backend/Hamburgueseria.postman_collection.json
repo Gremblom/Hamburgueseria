@@ -1,0 +1,811 @@
+{
+	"info": {
+		"_postman_id": "9f6cc2ae-6fc6-4fcc-b1c5-3662699552aa",
+		"name": "Hamburgueseria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28089201",
+		"_collection_link": "https://grey-astronaut-338473.postman.co/workspace/Campus~257b7832-8740-4d4f-be7f-c0f79ce732d1/collection/28089201-9f6cc2ae-6fc6-4fcc-b1c5-3662699552aa?action=share&source=collection_link&creator=28089201"
+	},
+	"item": [
+		{
+			"name": "GET - ingredientes - req 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/ingredients/ls400",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"ingredients",
+						"ls400"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/vegan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"vegan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - chefs - req 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/chefs/meats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"chefs",
+						"meats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - ingredientes - req 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/ingredients/mul15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"ingredients",
+						"mul15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/chefA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"chefA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - categorias - req 6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/categories/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"categories",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - ingredientes - req 7",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/ingredients/delstck0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"ingredients",
+						"delstck0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 8",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/addClassIng",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"addClassIng"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 9",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/intBread",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"intBread"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - chefs - req 10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/chefs/chngChefC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"chefs",
+						"chngChefC"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - ingredientes - req 11",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/ingredients/maxIng",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"ingredients",
+						"maxIng"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 12",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/notCheese",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"notCheese"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - ingredientes - req 13",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/ingredients/incBrd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"ingredients",
+						"incBrd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - ingredientes - req 14",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/ingredients/classic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"ingredients",
+						"classic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 15",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/lsoreq9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"lsoreq9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - chefs - req 16",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/chefs/chefCount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"chefs",
+						"chefCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - categorias - req 17",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/categories/gourmet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"categories",
+						"gourmet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 18",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/delLess5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"delLess5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - chefs - req 19",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/chefs/newChef",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"chefs",
+						"newChef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 20",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/burgAsc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"burgAsc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - ingredientes - req 21",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/ingredients/2between5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"ingredients",
+						"2between5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - ingredientes - req 22",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/ingredients/updBrdDsc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"ingredients",
+						"updBrdDsc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 23",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/tomAndLett",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"tomAndLett"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - chefs - req 24",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/chefs/notChfA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"chefs",
+						"notChfA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 25",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/add2Gourm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"add2Gourm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - ingredientes - req 26",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/ingredients/listAlphOrd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"ingredients",
+						"listAlphOrd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 27",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/expBurg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"expBurg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 28",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/addPicklesClass",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"addPicklesClass"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - chefs - req 29",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/chefs/delVeganCook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"chefs",
+						"delVeganCook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 30",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/burg7Ing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"burg7Ing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 31",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/expGourmChef",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"expGourmChef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 32",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/cantIng",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"cantIng"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 33",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/chefBurgCount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"chefBurgCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesa - req 34",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/moreCatCant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"moreCatCant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 35",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/chefBurgPrice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"chefBurgPrice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 36",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/ingNotInBurg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"ingNotInBurg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 37",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/burgDesc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"burgDesc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 38",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/moreBurgIntChef",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"moreBurgIntChef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 39",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/avgBurgCost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"avgBurgCost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - hamburguesas - req 40",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/burgers/chefExpBurgCost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"burgers",
+						"chefExpBurgCost"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -220,10 +220,153 @@ const countIng = async (req, res)=>{
             { $unwind: '$ingredientes' },
             { $group: { _id: '$ingredientes', count: { $sum: 1 } } }
         ]).toArray();
+
         res.json(response);
-        client.close();
     } catch (error) {
         res.status(404).json({message: error.message});
+    }
+}
+
+// 33
+const chefBurgCount = async (req, res)=>{
+     try {
+        const db = await connection();
+        const collection = db.collection('Hamburguesas');
+
+        const response = await collection.aggregate([{$group : {_id : "$chef", cantidad : {$sum : 1}}}]).toArray();
+
+        res.json(response);        
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// 34 
+const moreCatCant = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Hamburguesas');
+
+        const response = await collection.aggregate([{$group : {_id : "$categoria", cantidad : {$sum : 1}}}]).sort({cantidad : 1}).limit(1).toArray();
+
+        res.json(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// 35
+const chefBurgPrice = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Hamburguesas');
+
+        const response = await collection.aggregate([
+            {$unwind : '$ingredientes'},
+            {$lookup : {
+                 from : 'ingredientes', 
+                 localField : 'ingredientes', 
+                 foreignField : 'nombre', 
+                 as : 'totalPrecio' 
+                }},
+            {
+                $group: {
+                    _id: '$chef',
+                    costoTotal: {$sum : {$sum: '$ingredientesData.precio'}}
+                }
+            }
+        ]).toArray();
+        res.json(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// 36
+const ingNotBurg = async (req, res)=>{
+    try {
+        const db = await connection();
+
+        const hamburguesas = await db.Hamburguesas.distinct('ingredientes');
+        const response = await db.Ingredientes.find({nombre : {$nin : hamburguesas}}).toArray();
+
+        res.json(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// 37
+const burgDesc = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Hamburguesas');
+
+        const response = await collection.aggregate([
+            {$lookup : {
+                from : 'Categorias',
+                localField : 'categoria',
+                foreignField : 'nombre',
+                as : 'categoriaDesc'
+            }}
+        ]).toArray();
+
+        res.json(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// 38
+const moreBurgIntChef = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Hamburguesas');
+
+        const response = await collection.aggregate([
+            {$unwind : '$ingredientes'},
+            {$group : { _id : '$chef', ingredientesCount : {$sum : 1}}},
+            {$sort : {ingredientesCount : -1} },
+            {$limit : 1}
+        ]).toArray();
+
+        res.json(response);
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+// 39
+const avgBurgCost = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Hamburguesas');
+
+        const response = await collection.aggregate([
+            {$group : {_id : '$categoria', precio : {$avg : '$precio'}}}
+        ]).toArray();
+
+        res.json(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// 40 (Cortesía de sebastian bernal, no lo entendí y me ayudó con este)
+const chefMoreBurgCost = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Hamburguesas');
+
+        const response = await collection('hamburguesas').aggregate([
+            {$group : {_id : '$chef', hamburguesaCara : {$max : '$precio'}}},
+            {$lookup : {from : 'chefs', localField : '_id', foreignField : 'nombre', as : 'chefData'}},
+            {$project : {_id: 0, 'chefData.nombre' : 1, hamburguesaCara : 1}}
+        ]).toArray();
+
+        res.json(response);
+    } catch (error) {
+        console.log(error);
     }
 }
 
@@ -242,5 +385,13 @@ export {
     addPcklsClss,
     burg7Ing,
     gourmExpChef,
-    countIng
+    countIng,
+    chefBurgCount,
+    moreCatCant,
+    chefBurgPrice,
+    ingNotBurg,
+    burgDesc,
+    moreBurgIntChef,
+    avgBurgCost,
+    chefMoreBurgCost
 }
