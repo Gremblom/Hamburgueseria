@@ -210,6 +210,23 @@ const gourmExpChef = async (req, res)=>{
     }
 }
 
+// 32
+const countIng = async (req, res)=>{
+    try {
+        const db = await connection();
+        const collection = db.collection('Hamburguesas');
+
+        const response = await collection.aggregate([
+            { $unwind: '$ingredientes' },
+            { $group: { _id: '$ingredientes', count: { $sum: 1 } } }
+        ]).toArray();
+        res.json(response);
+        client.close();
+    } catch (error) {
+        res.status(404).json({message: error.message});
+    }
+}
+
 export {
     veganBurger,
     burgerChefB,
@@ -224,5 +241,6 @@ export {
     expBurger,
     addPcklsClss,
     burg7Ing,
-    gourmExpChef
+    gourmExpChef,
+    countIng
 }

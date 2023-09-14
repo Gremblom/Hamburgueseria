@@ -1,6 +1,6 @@
 import {Router} from "express";
 
-import {veganBurger, burgerChefB, addClassIng, intBreadBurg, notCheeseBurg, lessOrEq9, delLess5Ing, listBurgAsc, tomAndLett, add2AllGourm, expBurger, addPcklsClss, burg7Ing, gourmExpChef} from "../controllers/hamburguesas.controller.js";
+import {veganBurger, burgerChefB, addClassIng, intBreadBurg, notCheeseBurg, lessOrEq9, delLess5Ing, listBurgAsc, tomAndLett, add2AllGourm, expBurger, addPcklsClss, burg7Ing, gourmExpChef, countIng} from "../controllers/hamburguesas.controller.js";
 
 const router = Router();
 
@@ -18,5 +18,6 @@ router.get("/expBurg", expBurger);
 router.get("/addPicklesClass", addPcklsClss);
 router.get("/burg7Ing", burg7Ing);
 router.get("/expGourmChef", gourmExpChef);
+router.get("/countIng", countIng);
 
 export default router;
